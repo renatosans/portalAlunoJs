@@ -1,11 +1,3 @@
-import axios from 'axios'
-
-
-const api = axios.create({
-    baseURL: 'https://hercules8-backend.vercel.app',
-    timeout: 4500,
-    headers: { 'Content-Type': 'application/json' }
-})
 
 const notification = {
     message: 'nada consta',
@@ -20,4 +12,4 @@ const notification = {
     }
 }
 
-export { api, notification }
+export { notification }
