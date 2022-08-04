@@ -1,0 +1,24 @@
+{
+  "name": "portal-aluno-js",
+  "version": "1.0.0",
+  "description": "Portal do Aluno",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renatosans/portalAlunoJs.git"
+  },
+  "author": "Renato R. Sanseverino",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^4.0.0",
+    "express": "^4.17.1",
+    "express-next-api": "^1.1.2",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "prisma": "^4.0.0"
+  }
+}
