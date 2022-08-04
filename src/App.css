@@ -11,8 +11,6 @@
 body{
   background-image: url('images/sala_de_aula.jpg');
   background-size: 100%;
-  color: white;
-  text-shadow: 5px 5px black;
 }
 
 .header{

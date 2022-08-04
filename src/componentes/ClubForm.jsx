@@ -13,18 +13,15 @@ export default function ClubForm({id, parentRef}) {
 	}
 
 	const [clube, setClube] = useState({
-        "pais": "",
         "nome": "",
         "email": "",
-        "telefone": "",
-        "fax": "",
-        "imagem": ""
+        "foto": ""
 	})
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		if (clube.nome === "" || clube.email === "" || clube.telefone === "") {
+		if (clube.nome === "" || clube.email === "" || clube.foto === "") {
 			toast.error('Alguns campos obrigatórios não foram preenchidos!', notification.options);
 			return;
 		}
