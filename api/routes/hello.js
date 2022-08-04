@@ -7,7 +7,7 @@ function sayHello(req, res) {
         return;
     }
 
-    const dir = path.resolve('./public', 'images');
+    const dir = path.resolve('../public', 'images');
     const filenames = fs.readdirSync(dir);
     const images = filenames.map(name => path.join('/', 'images', name));
     // res.json(images);

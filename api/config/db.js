@@ -1,12 +1,13 @@
 const { PrismaClient } = require('@prisma/client');
 
 
-const host     = 'localhost';
-const username = 'root';
-const password = 'p@ssw0rd';
+// dados da conexão com BD serverless
+const host     = 'kep2xs6o673n.aws-sa-east-1-1.psdb.cloud';
+const username = Buffer.from('NnVmZ3V2NTZiaGhk', 'base64').toString('ascii');
+const password = Buffer.from('cHNjYWxlX3B3X3NKMFE1Y1BZalRXZmtKXzFoUFpPdDFkQzNGbmtSSklyelk4MmMzUldzT3M=', 'base64').toString('ascii');
 const port     = 3306
 const database = 'portal_aluno'
-const ssl      = false
+const ssl      = true
 const setSSL   = 'sslaccept=strict&sslmode=require'
 
 
