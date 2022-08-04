@@ -15,7 +15,6 @@ app.use(nextApi({ base: '/api', directory: 'routes', options: {caseSensitive: fa
 app.listen(port, () => console.log('Express escutando chamadas na porta ' + port));
 
 /*
-const mysqlConnection = mysql.createConnection({ host: 'localhost', user: 'root', password: 'p@ssw0rd', port: '3306', database: 'portal_aluno' });
 
 app.get('/professores', (req, res) => {
     const query = "SELECT * FROM professor";
