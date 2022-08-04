@@ -1,6 +1,10 @@
+const prisma = require('../../config/db');
+
 
 function getProfessores(req, res) {
-	res.send('Listagem de professores');
+	prisma.professor.findMany()
+	.then((professores) => res.send(professores))
+	.catch((error) => res.send("Error: " + error.message))
 }
 
 function insertProfessor(req, res) {

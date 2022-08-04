@@ -1,6 +1,10 @@
+const prisma = require('../../config/db');
+
 
 function getAlunos(req, res) {
-	res.send('Listagem de alunos');
+	prisma.aluno.findMany()
+	.then((alunos) => res.send(alunos))
+	.catch((error) => res.send("Error: " + error.message))
 }
 
 function insertAluno(req, res) {
