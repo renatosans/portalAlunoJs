@@ -10,6 +10,7 @@ export default function App() {
           <div id="panel"></div>
         </header>
         <main className="main">
+          <ClubList></ClubList>
         </main>
         <footer className="footer">
           <div id="bottom-content"></div>
