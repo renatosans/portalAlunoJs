@@ -31,11 +31,11 @@ export default function ClubForm({id, parentRef}) {
 
 		try {
 			if (id === undefined) {
-				await axios.post("/api/clubes", {
+				await axios.post("/api/routes/professores", {
 					...clube,
 				})
 			} else {
-				await axios.put("/api/clubes/" + id, {
+				await axios.put("/api/routes/professores/" + id, {
 					...clube,
 				})
 			}
@@ -58,7 +58,7 @@ export default function ClubForm({id, parentRef}) {
 
 	useEffect(() => {
 		const getClube = async (id) => {
-			const { data: clube } = await axios.get("/api/clubes/" + id);
+			const { data: clube } = await axios.get("/api/routes/professores/" + id);
 			setClube(clube);
 		};
 
