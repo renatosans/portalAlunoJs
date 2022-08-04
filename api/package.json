@@ -15,12 +15,12 @@
   "author": "Renato R. Sanseverino",
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^4.0.0",
+    "@prisma/client": "^4.1.1",
     "express": "^4.17.1",
     "express-next-api": "^1.1.2",
     "mysql2": "^2.3.3"
   },
   "devDependencies": {
-    "prisma": "^4.0.0"
+    "prisma": "^4.1.1"
   }
 }
