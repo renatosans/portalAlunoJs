@@ -9,7 +9,7 @@ const app = express();
 app.use("/", express.static('../Public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
-app.use(nextApi({ base: '/api', directory: '../', options: {caseSensitive: false} }))
+app.use(nextApi({ base: '/api', directory: 'routes', options: {caseSensitive: false} }))
 
 // inicia a API escutando na porta 3000
 app.listen(port, () => console.log('Express escutando chamadas na porta ' + port));
