@@ -15,7 +15,8 @@ export default function TeacherForm({id, parentRef}) {
 	const [clube, setClube] = useState({
         "nome": "",
         "email": "",
-        "foto": ""
+        "foto": "",
+        "formatoImagem": ""
 	})
 
 	const handleSubmit = async (e) => {
@@ -102,6 +103,8 @@ export default function TeacherForm({id, parentRef}) {
 						onChange={onChange} >
 					</textarea>
 				</div>
+				<input type="hidden" name="formatoImagem" value={clube.formatoImagem} onChange={onChange} />
+
 				<button type="submit" className="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded focus:outline-none focus:shadow-outline text-white font-bold">
 					Salvar
 				</button>
