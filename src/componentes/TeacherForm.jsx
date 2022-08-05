@@ -92,26 +92,15 @@ export default function ClubForm({id, parentRef}) {
 					/>
 				</div>
 				<div className="mb-4">
-					<label htmlFor="telefone" className="block text-gray-700 text-sm font-bold md-2">
-						Telefone
+					<label htmlFor="foto" className="block text-gray-700 text-sm font-bold md-2">
+						Foto
 					</label>
 					<textarea
-						name="telefone"
-						value={clube.telefone}
+						name="foto"
+						value={clube.foto}
 						className="shadow appearance  border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 						onChange={onChange} >
 					</textarea>
-				</div>
-				<div className="mb-4">
-					<label htmlFor="imagem" className="block text-gray-700 text-sm font-bold md-2">
-						Imagem
-					</label>
-					<input type="text"
-						name="imagem"
-						value={clube.imagem}
-						className="shadow appearance  border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-						onChange={onChange}
-					/>
 				</div>
 				<button type="submit" className="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded focus:outline-none focus:shadow-outline text-white font-bold">
 					Salvar
