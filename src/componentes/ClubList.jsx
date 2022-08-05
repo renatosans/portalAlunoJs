@@ -30,7 +30,7 @@ export default function ClubList() {
 		{ field: 'nome', headerName: 'Nome', width: 120, renderCell: (params) => 
 			<ClickableField rowId={params.row.id} label={params.row.nome} parentRef={{ getClubes }}></ClickableField> },
 		{ field: 'email', headerName: 'E-mail', width: 120 },
-		{ field: 'foto', headerName: 'Imagem', width: 80 }
+		{ field: 'foto', headerName: 'Foto', width: 80 }
 	]
 
 	function insertClub() {
