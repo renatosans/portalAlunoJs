@@ -41,8 +41,8 @@ export default function ClubForm({id, parentRef}) {
 			return;
 		}
 
-		toast.success('Clube salvo com sucesso', notification.options);
-		parentRef.getClubes(); // Refresh da lista de clubes
+		toast.success('Registro salvo com sucesso', notification.options);
+		parentRef.getProfessores(); // Refresh da lista de professores
 		close();
 	}
 

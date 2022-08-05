@@ -14,15 +14,15 @@ import ConfirmationDialog from './ConfirmationDialog';
 
 export default function ClubList() {
 
-	const [clubes, setClubes] = useState([]);
+	const [professores, setProfessores] = useState([]);
 
-	const getClubes = async () => {
-	  const { data: clubes } = await axios.get('/api/routes/professores')
-	  setClubes(clubes)
+	const getProfessores = async () => {
+	  const { data: professores } = await axios.get('/api/routes/professores')
+	  setProfessores(professores)
 	}
 
 	useEffect(() => {
-	  getClubes();
+	  getProfessores();
 	}, []);
 
     const columns = [
@@ -72,7 +72,7 @@ export default function ClubList() {
 			<Button variant="outlined" startIcon={<DeleteIcon />} onClick={deleteClub} >Excluir</Button>
 			<Button variant="outlined" startIcon={<AddCircleIcon />} onClick={insertClub} >Novo</Button>
 
-			<DataGrid columns={columns} rows={clubes} pageSize={5} rowsPerPageOptions={[5]} checkboxSelection
+			<DataGrid columns={columns} rows={professores} pageSize={5} rowsPerPageOptions={[5]} checkboxSelection
                 onSelectionModelChange={setSelectionModel} selectionModel={selectionModel} />
 		</>
 	)
