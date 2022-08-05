@@ -8,7 +8,11 @@ function getProfessores(req, res) {
 }
 
 function insertProfessor(req, res) {
-	res.send('Registro salvo com sucesso');
+    // const { id, nome, email, foto, formatoImagem } = req.body;
+
+	prisma.professor.create({ data: req.body })
+	.then((result) => res.send(result))
+	.catch((error) => res.send("Error: " + error.message))
 }
 
 module.exports = {

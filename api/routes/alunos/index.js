@@ -8,7 +8,11 @@ function getAlunos(req, res) {
 }
 
 function insertAluno(req, res) {
-	res.send('Registro salvo com sucesso');
+	// const { rg, nome, serie, classe } = req.body;
+
+	prisma.aluno.create({ data: req.body })
+	.then((result) => res.send(result))
+	.catch((error) => res.send("Error: " + error.message))
 }
 
 module.exports = {
