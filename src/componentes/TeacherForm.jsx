@@ -27,7 +27,7 @@ export default function TeacherForm({id, parentRef}) {
 		}
 
 		try {
-			if (id === undefined) {
+			if (id === null) {
 				await axios.post("/api/routes/professores", {
 					...clube,
 				})
@@ -59,7 +59,7 @@ export default function TeacherForm({id, parentRef}) {
 			setClube(clube);
 		};
 
-		if (id !== undefined) getClube(id);
+		if (id !== null) getClube(id);
 	}, []);
 
 	return (
