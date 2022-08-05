@@ -36,7 +36,7 @@ export default function TeacherList() {
 	function insertTeacher() {
         const root = ReactDom.createRoot(document.getElementById('panel'));
 
-        const teacherForm = React.createElement(TeacherForm, {id: null, parentRef: { getProfessores } }, null);
+        const teacherForm = React.createElement(TeacherForm, {id: undefined, parentRef: { getProfessores } }, null);
 		root.render(teacherForm);
 	}
 
