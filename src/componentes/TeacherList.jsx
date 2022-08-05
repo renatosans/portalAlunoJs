@@ -12,7 +12,7 @@ import ClickableField from './ClickableField';
 import ConfirmationDialog from './ConfirmationDialog';
 
 
-export default function ClubList() {
+export default function TeacherList() {
 
 	const [professores, setProfessores] = useState([]);
 

@@ -5,7 +5,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import { notification } from '../config/defaults'
 
 
-export default function ClubForm({id, parentRef}) {
+export default function TeacherForm({id, parentRef}) {
 	const [open, setOpen] = useState(true);
 
 	const close = () => {
