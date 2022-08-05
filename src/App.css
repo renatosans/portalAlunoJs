@@ -8,11 +8,6 @@
   margin: 0;
 }
 
-body{
-  background-image: url('images/sala_de_aula.jpg');
-  background-size: 100%;
-}
-
 .header{
   justify-content: center;
   align-items: center;
@@ -23,6 +18,8 @@ body{
   width: 60rem;
   height: 30rem;
   justify-content: center;
+  background-image: url('images/sala_de_aula.jpg');
+  background-size: 100%;
 }
 
 .footer {
