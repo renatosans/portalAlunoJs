@@ -28,19 +28,19 @@ export default function ClubList() {
     const columns = [
 		{ field: 'id', headerName: 'id', width: 80 },
 		{ field: 'nome', headerName: 'Nome', width: 160, renderCell: (params) => 
-			<ClickableField rowId={params.row.id} label={params.row.nome} parentRef={{ getClubes }}></ClickableField> },
+			<ClickableField rowId={params.row.id} label={params.row.nome} parentRef={{ getProfessores }}></ClickableField> },
 		{ field: 'email', headerName: 'E-mail', width: 160 },
 		{ field: 'foto', headerName: 'Foto', width: 200 }
 	]
 
-	function insertClub() {
+	function insertTeacher() {
         const root = ReactDom.createRoot(document.getElementById('panel'));
 
-        const teacherForm = React.createElement(TeacherForm, {id: undefined, parentRef: { getClubes } }, null);
+        const teacherForm = React.createElement(TeacherForm, {id: undefined, parentRef: { getProfessores } }, null);
 		root.render(teacherForm);
 	}
 
-	function deleteClub() {
+	function deleteTeacher() {
 		const root = ReactDom.createRoot(document.getElementById('panel'));
 
 		if (selectionModel.length < 1){
@@ -58,7 +58,7 @@ export default function ClubList() {
 		if (result) {
 			const promises = selectionModel.map(async (id) => { await axios.delete(`/api/routes/professores/${id}`) } );
 			Promise.all(promises)
-				.then(() => { getClubes() } )  // Refresh da lista de clubes
+				.then(() => { getProfessores() } )  // Refresh da lista de professores
 				.catch((error) => { toast.error(error.message) })
 		}		
 	}
@@ -69,8 +69,8 @@ export default function ClubList() {
 		<>
             <Toaster />
 
-			<Button variant="outlined" startIcon={<DeleteIcon />} onClick={deleteClub} >Excluir</Button>
-			<Button variant="outlined" startIcon={<AddCircleIcon />} onClick={insertClub} >Novo</Button>
+			<Button variant="outlined" startIcon={<DeleteIcon />} onClick={deleteTeacher} >Excluir</Button>
+			<Button variant="outlined" startIcon={<AddCircleIcon />} onClick={insertTeacher} >Novo</Button>
 
 			<DataGrid columns={columns} rows={professores} pageSize={5} rowsPerPageOptions={[5]} checkboxSelection
                 onSelectionModelChange={setSelectionModel} selectionModel={selectionModel} />
