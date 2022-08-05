@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import ClubForm from './ClubForm'
+import TeacherForm from './TeacherForm'
 
 
 export default function ClickableField({ rowId, label, parentRef }) {
@@ -8,8 +8,8 @@ export default function ClickableField({ rowId, label, parentRef }) {
 	const handleClick = () => {
         const root = ReactDom.createRoot(document.getElementById('panel'));
 
-        const clubForm = React.createElement(ClubForm, { id: rowId, parentRef: parentRef }, null);
-		root.render(clubForm);
+        const teacherForm = React.createElement(TeacherForm, { id: rowId, parentRef: parentRef }, null);
+		root.render(teacherForm);
 	}
 
 	return (
