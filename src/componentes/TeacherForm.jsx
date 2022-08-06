@@ -55,12 +55,12 @@ export default function TeacherForm({id, parentRef}) {
 	};
 
 	useEffect(() => {
-		const getClube = async (id) => {
-			const { data: clube } = await axios.get("/api/routes/professores/" + id);
-			setClube(clube);
+		const getProfessor = async (id) => {
+			const { data: professor } = await axios.get("/api/routes/professores/" + id);
+			setProfessor(professor);
 		};
 
-		if (id !== undefined) getClube(id);
+		if (id !== undefined) getProfessor(id);
 	}, []);
 
 	return (
