@@ -43,7 +43,7 @@ export default function TeacherForm({id, parentRef}) {
 		}
 
 		toast.success('Registro salvo com sucesso', notification.options);
-		parentRef.getProfessores(); // Refresh da lista de professores
+		parentRef.getProfessores();  // Refresh da lista de professores
 		close();
 	}
 
