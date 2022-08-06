@@ -75,7 +75,7 @@ export default function TeacherForm({id, parentRef}) {
 					</label>
 					<input type="text"
 						name="nome"
-						value={clube.nome}
+						value={professor.nome}
 						className="shadow appearance  border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 						onChange={onChange}
 					/>
@@ -87,7 +87,7 @@ export default function TeacherForm({id, parentRef}) {
 					</label>
 					<input type="text"
 						name="email"
-						value={clube.email}
+						value={professor.email}
 						className="shadow appearance  border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 						onChange={onChange}
 					/>
@@ -98,12 +98,12 @@ export default function TeacherForm({id, parentRef}) {
 					</label>
 					<textarea
 						name="foto"
-						value={clube.foto}
+						value={professor.foto}
 						className="shadow appearance  border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 						onChange={onChange} >
 					</textarea>
 				</div>
-				<input type="hidden" name="formatoImagem" value={clube.formatoImagem} onChange={onChange} />
+				<input type="hidden" name="formatoImagem" value={professor.formatoImagem} onChange={onChange} />
 
 				<button type="submit" className="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded focus:outline-none focus:shadow-outline text-white font-bold">
 					Salvar
