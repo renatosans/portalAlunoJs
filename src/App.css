@@ -11,8 +11,6 @@
 .header{
   justify-content: center;
   align-items: center;
-  background-image: url('images/sala_de_aula.jpg');
-  background-size: 100%;
 }
 
 .main {
