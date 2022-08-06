@@ -26,11 +26,11 @@ export default function TeacherList() {
 	}, []);
 
     const columns = [
-		{ field: 'id', headerName: 'id', width: 80 },
-		{ field: 'nome', headerName: 'Nome', width: 160, renderCell: (params) => 
+		{ field: 'id', headerName: 'Id', width: 80 },
+		{ field: 'nome', headerName: 'Nome', width: 250, renderCell: (params) => 
 			<ClickableField rowId={params.row.id} label={params.row.nome} parentRef={{ getProfessores }}></ClickableField> },
-		{ field: 'email', headerName: 'E-mail', width: 160 },
-		{ field: 'foto', headerName: 'Foto', width: 200 }
+		{ field: 'email', headerName: 'E-mail', width: 250 },
+		{ field: 'foto', headerName: 'Foto', width: 250 }
 	]
 
 	function insertTeacher() {
