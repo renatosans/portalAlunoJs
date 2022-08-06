@@ -10,17 +10,15 @@
 
 .header{
   justify-content: center;
-  align-items: center;
 }
 
 .main {
-  margin: 5rem;
-  width: 60rem;
-  height: 30rem;
-  justify-content: center;
+  width: 80rem;
+  height: 40rem;
+  background-color: white;
+  padding: 5rem;
 }
 
 .footer {
   justify-content: center;
-  align-items: center;
 }
