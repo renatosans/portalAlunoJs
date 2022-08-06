@@ -12,7 +12,7 @@ export default function TeacherForm({id, parentRef}) {
 		setOpen(false);
 	}
 
-	const [clube, setClube] = useState({
+	const [professor, setProfessor] = useState({
         "nome": "",
         "email": "",
         "foto": "",
@@ -22,7 +22,7 @@ export default function TeacherForm({id, parentRef}) {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		if (clube.nome === "" || clube.email === "" || clube.foto === "") {
+		if (professor.nome === "" || professor.email === "" || professor.foto === "") {
 			toast.error('Alguns campos obrigatórios não foram preenchidos!', notification.options);
 			return;
 		}
@@ -30,11 +30,11 @@ export default function TeacherForm({id, parentRef}) {
 		try {
 			if (id === undefined) {
 				await axios.post("/api/routes/professores", {
-					...clube,
+					...professor,
 				})
 			} else {
 				await axios.put("/api/routes/professores/" + id, {
-					...clube,
+					...professor,
 				})
 			}
 		} catch (error) {
@@ -48,8 +48,8 @@ export default function TeacherForm({id, parentRef}) {
 	}
 
 	const onChange = (e) => {
-		setClube({
-			...clube,
+		setProfessor({
+			...professor,
 			[e.target.name]: e.target.value,
 		});
 	};
