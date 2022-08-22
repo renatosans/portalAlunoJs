@@ -96,12 +96,15 @@ export default function TeacherForm({id, parentRef}) {
 					<label htmlFor="foto" className="block text-gray-700 text-sm font-bold md-2">
 						Foto
 					</label>
-					<textarea
-						name="foto"
-						value={professor.foto}
-						className="shadow appearance  border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-						onChange={onChange} >
-					</textarea>
+					<div className="bg-gray-400 flex flex-row">
+						<textarea
+							name="foto"
+							value={professor.foto}
+							className="shadow appearance  border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+							onChange={onChange} >
+						</textarea>
+						<img src={"data:" + professor.formatoImagem + ", " + professor.foto} alt={professor.nome}></img>
+					</div>
 				</div>
 				<input type="hidden" name="formatoImagem" value={professor.formatoImagem} onChange={onChange} />
 
