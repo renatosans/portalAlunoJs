@@ -2,26 +2,26 @@ const prisma = require('../../config/db');
 
 
 function getAluno(req, res) {
-	const { id } = req.params || req.query;
+	const { rg } = req.params || req.query;
 
-	prisma.aluno.findUnique({ where: { id: Number(id) } })
+	prisma.aluno.findUnique({ where: { rg: String(rg) } })
 	.then((aluno) => res.send(aluno))
 	.catch((error) => res.send("Error: " + error.message))
 }
 
 function deleteAluno(req, res) {
-	const { id } = req.params || req.query;
+	const { rg } = req.params || req.query;
 
-	prisma.aluno.delete({ where: { id: Number(id) } })
+	prisma.aluno.delete({ where: { rg: String(rg) } })
 	.then((result) => res.send(result))
 	.catch((error) => res.send("Error: " + error.message))
 }
 
 function updateAluno(req, res) {
 	// Serverless Database does not suport foreign keys, bug detected
-	const { id } = req.params || req.query;
+	const { rg } = req.params || req.query;
 
-	prisma.aluno.update({ where: { id: Number(id) }, data: req.body })
+	prisma.aluno.update({ where: { rg: String(rg) }, data: req.body })
 	.then((result) => res.send(result))
 	.catch((error) => res.send("Error: " + error.message))
 }
