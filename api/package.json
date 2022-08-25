@@ -18,7 +18,8 @@
     "@prisma/client": "^4.1.1",
     "express": "^4.17.1",
     "express-next-api": "^1.1.2",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "prisma": "^4.1.1"
