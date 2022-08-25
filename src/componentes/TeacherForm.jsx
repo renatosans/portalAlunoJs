@@ -96,11 +96,11 @@ export default function TeacherForm({id, parentRef}) {
 					<label htmlFor="foto" className="block text-gray-700 text-sm font-bold md-2">
 						Foto
 					</label>
-					<div className="resize-x flex flex-row bg-gray-400">
+					<div className="flex flex-row bg-gray-400">
 						<textarea
 							name="foto"
 							value={professor.foto}
-							className="shadow appearance  border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+							className="resize-x border rounded text-gray-700"
 							onChange={onChange} >
 						</textarea>
 						<img src={"data:" + professor.formatoImagem + ", " + professor.foto} alt={professor.nome}></img>

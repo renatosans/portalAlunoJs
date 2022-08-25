@@ -1,4 +1,3 @@
-const mysql = require('mysql2');
 const express = require('express');
 const { nextApi, nextRouter } = require('express-next-api');
 
@@ -11,11 +10,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(nextApi({ base: '/api/routes', directory: 'routes', options: {caseSensitive: false} }))
 
+// setHeader('Access-Control-Allow-Origin', '*')
+
+
 // inicia a API escutando na porta 3000
 app.listen(port, () => console.log('Express escutando chamadas na porta ' + port));
 
 /*
-
 app.get('/professores', (req, res) => {
     const query = "SELECT * FROM professor";
 
