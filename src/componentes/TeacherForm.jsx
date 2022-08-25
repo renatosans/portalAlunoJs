@@ -96,7 +96,7 @@ export default function TeacherForm({id, parentRef}) {
 					<label htmlFor="foto" className="block text-gray-700 text-sm font-bold md-2">
 						Foto
 					</label>
-					<div className="bg-gray-400 flex flex-row">
+					<div className="resize-x flex flex-row bg-gray-400">
 						<textarea
 							name="foto"
 							value={professor.foto}
