@@ -100,7 +100,7 @@ export default function TeacherForm({id, parentRef}) {
 						<textarea
 							name="foto"
 							value={professor.foto}
-							className="resize-x border rounded text-gray-700"
+							className="resize-x min-w-fit border rounded text-gray-700"
 							onChange={onChange} >
 						</textarea>
 						<img src={"data:" + professor.formatoImagem + ", " + professor.foto} alt={professor.nome}></img>
