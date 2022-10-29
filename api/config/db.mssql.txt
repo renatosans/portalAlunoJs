@@ -1,6 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 
 
+// dados da conexão com o BD
 const host     = 'localhost'
 const port     = 1433
 const username = 'sa'
