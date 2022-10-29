@@ -13,7 +13,7 @@ export default function ClickableField({ rowId, label, parentRef }) {
 	}
 
 	return (
-		<button onClick={handleClick} style={{ color: 'darkblue', background: 'none', border: 'none' }} >
+		<button className="text-[#5577FF] bg-transparent border-0" onClick={handleClick} >
 			<b><u>{label}</u></b>
 		</button>
 	)
