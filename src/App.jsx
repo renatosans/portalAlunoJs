@@ -15,6 +15,9 @@ export default function App() {
 
   return (
     <>
+      // React Router doesn´t seem to work on vercel
+      https://stackoverflow.com/questions/64815012/why-does-react-router-not-works-at-vercel
+      // Possible fix :   add  vercel config file
       <Routes>
         <Route path="*" element={<Navigate to="/" replace />} />
         <Route exact path="/" element={<Home />} />
