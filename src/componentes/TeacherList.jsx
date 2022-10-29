@@ -73,7 +73,7 @@ export default function TeacherList() {
 			<Button variant="outlined" startIcon={<DeleteIcon />} onClick={deleteTeacher} >Excluir</Button>
 			<Button variant="outlined" startIcon={<AddCircleIcon />} onClick={insertTeacher} >Novo</Button>
 
-			<div className="w-full h-96 bg-black bg-opacity-80">{
+			<div className="w-full h-[700px] bg-black bg-opacity-80">{
 				<DataGrid sx={{ color: 'white' }} rowHeight={100} columns={columns} rows={professores} pageSize={5} rowsPerPageOptions={[5]} checkboxSelection
 				onSelectionModelChange={setSelectionModel} selectionModel={selectionModel} />
 			}

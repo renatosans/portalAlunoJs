@@ -1,4 +1,5 @@
 import Home from './pages/Home'
+import Students from './pages/Students'
 import Teachers from './pages/Teachers'
 import React, { useEffect } from 'react'
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
@@ -20,6 +21,7 @@ export default function App() {
       <Routes>
         <Route path="*" element={<Navigate to="/" replace />} />
         <Route exact path="/" element={<Home />} />
+        <Route path="/students" element={<Students />} />
         <Route path="/teachers" element={<Teachers />} />
       </Routes>
     </>
