@@ -1,20 +1,25 @@
-import './App.css'
-import TeacherList from './componentes/TeacherList'
+import Home from './pages/Home'
+import Teachers from './pages/Teachers'
+import React, { useEffect } from 'react'
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 
 
 export default function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    document.querySelector('html').style.scrollBehavior = 'auto'
+    window.scroll({ top: 0 })
+    document.querySelector('html').style.scrollBehavior = ''
+  }, [location.pathname]); // triggered on route change
 
   return (
-    <div style={{ "background-image": "url('images/sala_de_aula.jpg')", "background-size": "100%"}}>
-        <header className="header">      
-            <img src="images\logo.png" style={{"width":"400px", "height":"400px", "padding": "50px"}} />
-        </header>
-        <main className="main">
-            <TeacherList></TeacherList>
-        </main>
-        <footer className="footer">
-            <div id="panel"></div>
-        </footer>
-    </div>
+    <>
+      <Routes>
+        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route exact path="/" element={<Home />} />
+        <Route path="/teachers" element={<Teachers />} />
+      </Routes>
+    </>
   )
 }
