@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nome": "ISABELA CRISTINA CASSIANO",
+    "email": "isabela@gmail.com",
+    "foto": "/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJ....",
+    "formatoImagem": "image/jpg;base64"
+  },
+  {
+    "id": 2,
+    "nome": "CAROLINA MENEZES DA COSTA",
+    "email": "carolina@terra.com.br",
+    "foto": "/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAK....",
+    "formatoImagem": "image/jpg;base64"
+  },
+  {
+    "id": 3,
+    "nome": "LUIZ AUGUSTO TEIXEIRA BRANCO",
+    "email": "luizaugusto@gmail.com",
+    "foto": "/9j/2wBDAAYEBQYFBAYGBQYHBwYIC....",
+    "formatoImagem": "image/jpg;base64"
+  },
+  {
+    "id": 4,
+    "nome": "CAIO BATISTA CABRAL",
+    "email": "caiocabral@hotmail.com.br",
+    "foto": "iVBORw0KGgoAAAANSUhEUgAAALQAAADyCAIAAAB....",
+    "formatoImagem": "image/png;base64"
+  },
+  {
+    "id": 5,
+    "nome": "VINICIUS RODRIGUES FEITOZA VILLACA",
+    "email": "vinicius@hotmail.com",
+    "foto": "iVBORw0KGgoAAAANSUhEUgAAALQAA....",
+    "formatoImagem": "image/png;base64"
+  },
+  {
+    "id": 6,
+    "nome": "GEILDA CAMPOS ALVARIO MARQUEZ",
+    "email": "geilda33@gmail.com",
+    "foto": "iVBORw0KGgoAAAANSUhEUgAAALQAAADyCAIA....",
+    "formatoImagem": "image/png;base64"
+  }
+]
