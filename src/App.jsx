@@ -5,6 +5,10 @@ import React, { useEffect } from 'react'
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 
 
+// React Router doesn´t seem to work on vercel
+// Possible fix: add  vercel config file  (vercel.json)
+
+
 export default function App() {
   const location = useLocation();
 
@@ -16,8 +20,6 @@ export default function App() {
 
   return (
     <>
-      // React Router doesn´t seem to work on vercel
-      // Possible fix :   add  vercel config file
       <Routes>
         <Route path="*" element={<Navigate to="/" replace />} />
         <Route exact path="/" element={<Home />} />
