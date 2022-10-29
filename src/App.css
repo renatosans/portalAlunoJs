@@ -8,18 +8,19 @@
   margin: 0;
 }
 
-.header{
-  justify-content: center;
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
-.main {
-  width: 80rem;
-  height: 35rem;
-  background-color: white;
-  margin: 2rem;
-  padding: 2rem;
-}
-
-.footer {
-  justify-content: center;
+.navitem {
+  color: #F2F2F2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
