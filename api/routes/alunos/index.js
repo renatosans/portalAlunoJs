@@ -10,6 +10,8 @@ function getAlunos(req, res) {
 }
 
 // TODO : >>   Fix image upload    <<
+// Open INSOMNIA to test the endpoint ( http://localhost:3000/api/routes/alunos ),  use   sampleData.json
+// Expected behaviour : write the image to File System and store the image relative path in the database
 function insertAluno(req, res) {
 	const { rg, nome, serie, classe, imageFormat, imageData } = req.body;
 
