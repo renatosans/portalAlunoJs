@@ -26,8 +26,9 @@ function insertAluno(req, res) {
 		});
 	}); 
 
+	const nextNumber = Math.round(Math.random() * 99999);
 	const img = dir + filename;
-	const newAluno = { rg, nome, serie, classe };
+	const newAluno = { rg: nextNumber.toString(), nome, serie, classe };
 
     prisma.aluno.create({ data: newAluno })
 	.then((result) => res.send(result))
